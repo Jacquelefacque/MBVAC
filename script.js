@@ -5,6 +5,8 @@ const translations = {
     pricelist: "Price List",
     "about-menu": "About Us",
     contacts: "Contacts",
+    "gallery-menu": "Gallery",
+    "gallery-title": "Gallery",
     "prevention-title": "PREVENTION",
     "prevention-description":
       "Prevention is important because it helps avoid or reduce the occurrence of illnesses and other health conditions, thereby promoting better health, reducing healthcare costs, and improving quality of life.",
@@ -194,6 +196,8 @@ const translations = {
     pricelist: "Cenrādis",
     "about-menu": "Par mums",
     contacts: "Kontakti",
+    "gallery-menu": "Bildes",
+    "gallery-title": "Bildes",
     "prevention-title": "PROFILAKSE",
     "prevention-description":
       "Profilakse ir svarīga, jo tā palīdz izvairīties vai mazināt slimību un citu veselības traucējumu rašanos, veicina labāku veselību, samazina veselības aprūpes izmaksas un uzlabo dzīves kvalitāti.",
@@ -744,6 +748,24 @@ function loadSection(section) {
         </div>
       </section>
     `;
+  } else if (section === "gallery") {
+    html = `
+      <section class="gallery">
+        <h2 class="section-title" data-key="gallery-title"></h2>
+        <div class="gallery-grid">
+          <img src="gallery/IMG-20250612-WA0001.jpg" alt="" />
+          <img src="gallery/IMG-20250612-WA0002.jpg" alt="" />
+          <img src="gallery/IMG-20250612-WA0003.jpg" alt="" />
+          <img src="gallery/IMG-20250612-WA0004.jpg" alt="" />
+          <img src="gallery/IMG-20250612-WA0005.jpg" alt="" />
+          <img src="gallery/IMG-20250612-WA0006.jpg" alt="" />
+          <img src="gallery/IMG-20250612-WA0007.jpg" alt="" />
+          <img src="gallery/IMG-20250612-WA0008.jpg" alt="" />
+          <img src="gallery/IMG-20250612-WA0009.jpg" alt="" />
+          <img src="gallery/IMG-20250612-WA0010.jpg" alt="" />
+        </div>
+      </section>
+    `;
   } else if (section === "about") {
     html = `
       <section class="about">
@@ -817,6 +839,9 @@ function loadSection(section) {
   if (section === "contacts") {
     renderContactInfo();
   }
+  if (section === "gallery") {
+    setupGalleryLightbox();
+  }
 }
 
 function setActiveMenuItem(section) {
@@ -824,6 +849,55 @@ function setActiveMenuItem(section) {
     item.classList.remove("active");
     if (item.getAttribute("data-section") === section) {
       item.classList.add("active");
+    }
+  });
+}
+/**
+ * Initialize lightbox functionality for gallery images.
+ */
+function setupGalleryLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector(".lightbox-img");
+  const closeBtn = lightbox.querySelector(".lightbox-close");
+  const prevBtn = lightbox.querySelector(".lightbox-prev");
+  const nextBtn = lightbox.querySelector(".lightbox-next");
+  const galleryImgs = Array.from(
+    document.querySelectorAll(".gallery-grid img")
+  );
+  let currentIndex = 0;
+
+  function updateLightbox() {
+    lightboxImg.src = galleryImgs[currentIndex].src;
+  }
+
+  galleryImgs.forEach((img, idx) => {
+    img.addEventListener("click", () => {
+      currentIndex = idx;
+      updateLightbox();
+      lightbox.classList.remove("hidden");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.add("hidden");
+  });
+
+  prevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + galleryImgs.length) %
+      galleryImgs.length;
+    updateLightbox();
+  });
+
+  nextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % galleryImgs.length;
+    updateLightbox();
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.add("hidden");
     }
   });
 }

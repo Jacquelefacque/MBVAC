@@ -45,6 +45,15 @@
             <a
               href="#"
               class="menu-item"
+              data-section="gallery"
+              data-key="gallery-menu"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="menu-item"
               data-section="about"
               data-key="about-menu"
               >About Us</a
@@ -68,6 +77,13 @@
     </header>
 
     <main id="main-content"></main>
+    <!-- Lightbox overlay for gallery images -->
+    <div id="lightbox" class="lightbox hidden">
+      <span class="lightbox-close">&times;</span>
+      <span class="lightbox-prev">&#10094;</span>
+      <span class="lightbox-next">&#10095;</span>
+      <img class="lightbox-img" src="" alt="Enlarged image" />
+    </div>
 
     <footer>
       <p>© Mātes un bērna veselības aprūpes centrs 2025</p>
