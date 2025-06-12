@@ -751,7 +751,6 @@ function loadSection(section) {
   } else if (section === "gallery") {
     html = `
       <section class="gallery">
-        <h2 class="section-title" data-key="gallery-title"></h2>
         <div class="gallery-grid">
           <img src="gallery/IMG-20250612-WA0001.jpg" alt="" />
           <img src="gallery/IMG-20250612-WA0002.jpg" alt="" />
