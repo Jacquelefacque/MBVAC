@@ -100,7 +100,8 @@ const translations = {
     "pricelist-vaccine": "Vaccine",
     "pricelist-nurse": "Certified Child Care Nurse Līga Vēvere Kalniete",
     "pricelist-nose-washing":
-      "Nose washing using Proetz method (+ medications 2.00€)",
+      "Nose washing using Proetz method *with doctor's prescription",
+    "pricelist-nose-washing-no-doctor": "*without doctor's prescription",
     "pricelist-blood-test": "Blood sample collection (vein, finger)",
     "pricelist-throat-swab": "Throat swab collection",
     "pricelist-vaccination-visit": "Vaccination visit",
@@ -114,15 +115,21 @@ const translations = {
     "pricelist-sugar-test": "Blood sugar rapid test",
     "pricelist-urine-test": "Urine rapid test",
     "pricelist-strep-test": "Strep rapid test",
+    "pricelist-covid-test": "Covid-19 rapid test",
+    "pricelist-flu-test": "Influenza rapid test",
     "pricelist-ear-washing": "Ear washing",
     "pricelist-wound-care": "Wound care, dressing (excluding materials)",
     "pricelist-certificate":
       "Kindergarten or school, pool, illness certificates",
     "pricelist-prescription-working-hours":
-      "Prescription issuance outside of visit during working hours",
-    "pricelist-prescription-after-hours": "after working hours, on holidays",
+      "Prescription issuance outside of visit *during working hours",
+    "pricelist-prescription-after-hours": "*after working hours, on holidays",
+    "pricelist-dnl-visit": "Sick leave certificate opening during visit",
+    "pricelist-dnl-outside":
+      "*outside of visit with subsequent follow-up visit",
     "pricelist-phone-consultation":
-      "Phone consultations outside working hours, on holidays",
+      "Phone consultations *during working hours",
+    "pricelist-phone-consultation-holidays": "*holidays, weekends",
     "pricelist-medical-card": "Preparation of medical card extracts",
     "pricelist-kindergarten-card":
       "Preparation of kindergarten or school medical card",
@@ -132,14 +139,15 @@ const translations = {
     "vaccine-price-title": "Price",
     "ticovac-children": "TICOVAC tick-borne encephalitis *children",
     "ticovac-adult": "*from 16 years",
+    "infanrix-hexa":
+      "INFANRIX HEXA diphtheria, tetanus, pertussis, polio, Hib, hepatitis B",
     tetraxim: "TETRAXIM diphtheria, tetanus, pertussis, and polio",
     adacel: "ADACEL diphtheria, tetanus, and pertussis",
     "appexnar-prevenar20": "APPEXNAR/PREVENAR20 pneumococcal infection",
     "vaxigrip-tetra": "VAXIGRIP TETRA influenza",
     "engerix-b-adult": "ENGERIX B ADULT *from 16 years",
     "twinrix-adult": "TWINRIX Hepatitis A+B *only from 16 years",
-    "hepatits-a-children": "HEPATITIS A *For children",
-    "hepatits-a-adult": "*From 16 years of age",
+    "hepatits-a-adult": "HEPATITIS A *from 16 years of age",
     gardasil: "GARDASIL human papillomavirus, from 12 years of age",
     nimenrix: "NIMENRIX meningitis A, C, W, Y",
     mmrvaxpro: "MMRvaxPro measles, rubella, mumps",
@@ -292,7 +300,8 @@ const translations = {
     "pricelist-vaccine": "Vakcīna",
     "pricelist-nurse": "Sertificēta bērnu aprūpes māsa Līga Vēvere Kalniete",
     "pricelist-nose-washing":
-      "Deguna skalošana pēc Proetza metodes(+ medikamenti 2.00€)",
+      "Deguna skalošana pēc Proetza metodes *ar ārsta nozīmējumu",
+    "pricelist-nose-washing-no-doctor": "*bez ārsta nozīmējuma",
     "pricelist-blood-test": "Asins analīžu paņemšana (vēna, pirksts)",
     "pricelist-throat-swab": "Iztriepe no kakla paņemšana",
     "pricelist-vaccination-visit": "Vakcinācijas vizīte",
@@ -306,14 +315,23 @@ const translations = {
     "pricelist-sugar-test": "Cukura ekspresdiagnostika",
     "pricelist-urine-test": "Urīna ekspresdiagnostika",
     "pricelist-strep-test": "Streptokoka ekspresdiagnostika",
+    "pricelist-covid-test": "Covid-19 eksprestests",
+    "pricelist-flu-test": "Gripas eksprestests",
     "pricelist-ear-washing": "Ausu skalošana",
     "pricelist-wound-care": "Brūču apkopšana, pārsiešana (bez materiāliem)",
     "pricelist-certificate": "Bērnudārza vai skolas, baseina, slimības izziņas",
     "pricelist-prescription-working-hours":
-      "Recepšu izsniegšana ārpus vizītes darba dienas ietvaros",
-    "pricelist-prescription-after-hours": "pēc darba laika, svētku dienās",
+      "Recepšu izsniegšana ārpus vizītes *darba laikā",
+    "pricelist-prescription-after-hours":
+      "*pēc darba laika beigām, brīvdienās",
+    "pricelist-dnl-visit":
+      "DNL ('slimības lapa') atvēršana vizītes laikā",
+    "pricelist-dnl-outside":
+      "*ārpus vizītes ar pēc tam sekojošu vizīti",
     "pricelist-phone-consultation":
-      "Telefona konsultācijas ārpus darba laika, svētku dienās",
+      "Telefona konsultācijas *darba laikā",
+    "pricelist-phone-consultation-holidays":
+      "*brīvdienas, svētku dienas",
     "pricelist-medical-card": "Medicīniskās kartes izraksta sagatavošana",
     "pricelist-kindergarten-card":
       "Bērnudārza vai skolas medicīniskās kartes sagatavošana",
@@ -323,14 +341,15 @@ const translations = {
     "vaccine-price-title": "Cena",
     "ticovac-children": "TICOVAC ērču encefalīts *bērniem",
     "ticovac-adult": "*no 16 g.v.",
+    "infanrix-hexa":
+      "INFANRIX HEXA difterija, stingumkrampji, garais klepus, poliomielīts, b tipa Haemofilus influenza (Hib), hepatīts B",
     tetraxim: "TETRAXIM difterija, stingumkrampji, garais klepus, poliomielīts",
     adacel: "ADACEL difterija, stingumkrampji, garais klepus",
     "appexnar-prevenar20": "APPEXNAR/PREVENAR20 pneimokoku infekcija",
     "vaxigrip-tetra": "VAXIGRIP TETRA gripa",
     "engerix-b-adult": "ENGERIX B ADULT *no 16 g.v.",
     "twinrix-adult": "TWINRIX Hepatīts A+B *tikai no 16 g.v.",
-    "hepatits-a-children": "HEPATĪTS A *bērniem",
-    "hepatits-a-adult": "*no 16 g.v.",
+    "hepatits-a-adult": "HEPATĪTS A *no 16 g.v.",
     gardasil: "GARDASIL cilvēka papilomas vīruss *no 12g.v.",
     nimenrix: "NIMENRIX meningīts A,C,W,Y",
     mmrvaxpro: "MMRvaxPro masalas, masaliņas epid parotīts",
@@ -537,39 +556,39 @@ function loadSection(section) {
             </tr>
             <tr>
               <td data-key="pricelist-prophylactic">Profilaktiskā apskate (60min)</td>
-              <td>50.00€</td>
+              <td>58.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-prophylactic-2">*for 2 children</td>
-              <td>70.00€</td>
+              <td>85.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-prophylactic-3">*for 3 children</td>
-              <td>90.00€</td>
+              <td>100.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-illness">Illness visit (30min)</td>
-              <td>40.00€</td>
+              <td>48.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-illness-2">*for 2 children</td>
-              <td>55.00€</td>
+              <td>62.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-illness-after-hours">Illness visit after working hours (M.Tu.at 17.00, F.at 14.00)</td>
-              <td>45.00€</td>
+              <td>55.00€</td>
             </tr>
             <tr>
             <td data-key="pricelist-initial-consultation">Initial consultation from another healthcare facility</td>
-            <td>45.00€</td>
+            <td>58.00€</td>
             </tr>
             <tr>
                 <td data-key="pricelist-vaccination-visit-up1">Vaccination visit (up to 1 year of age)</td>
-                <td>30.00€</td>
+                <td>35.00€</td>
             </tr>
             <tr>
                 <td data-key="pricelist-vaccination-visit-over1">Vaccination visit (after 1 year of age)</td>
-                <td>25.00€</td>
+                <td>30.00€</td>
             </tr>
           </table>
           
@@ -580,8 +599,12 @@ function loadSection(section) {
               <th data-key="pricelist-price">Price</th>
             </tr>
             <tr>
-              <td data-key="pricelist-nose-washing">Deguna skalošana pēc Proetza metodes(+ medikamenti 2.00€)</td>
-              <td>10.00€</td>
+              <td data-key="pricelist-nose-washing">Nose washing using Proetz method *with doctor's prescription</td>
+              <td>15.00€</td>
+            </tr>
+            <tr>
+              <td data-key="pricelist-nose-washing-no-doctor">*without doctor's prescription</td>
+              <td>20.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-blood-test">Asins analīžu paņemšana (vēna, pirksts)</td>
@@ -589,27 +612,27 @@ function loadSection(section) {
             </tr>
             <tr>
               <td data-key="pricelist-throat-swab">Iztriepe no kakla paņemšana</td>
-              <td>5.00€</td>
+              <td>7.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-vaccination-visit">Vakcinācijas vizīte</td>
-              <td>15.00€</td>
+              <td>20.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-prophylactic-exam">Profilaktiskā apskate</td>
-              <td>15.00€</td>
+              <td>25.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-illness-visit">Slimības vizīte</td>
-              <td>15.00€</td>
+              <td>20.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-muscle-injection">Injekcija muskulī</td>
-              <td>8.00€</td>
+              <td>10.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-vein-injection">Injekcija vēnā</td>
-              <td>15.00€</td>
+              <td>20.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-iv-system">i/v sistēmas uzlikšana un novērošana</td>
@@ -617,47 +640,67 @@ function loadSection(section) {
             </tr>
             <tr>
               <td data-key="pricelist-inhalation">Inhalācija</td>
-              <td>2.00€</td>
+              <td>10.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-crp-test">CRP rapid test</td>
-              <td>6.00€</td>
+              <td>10.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-sugar-test">Blood sugar rapid test</td>
-              <td>2.00€</td>
+              <td>5.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-urine-test">Urine rapid test</td>
-              <td>2.00€</td>
+              <td>5.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-strep-test">Strep rapid test</td>
-              <td>6.00€</td>
+              <td>10.00€</td>
+            </tr>
+            <tr>
+              <td data-key="pricelist-covid-test">Covid-19 rapid test</td>
+              <td>8.00€</td>
+            </tr>
+            <tr>
+              <td data-key="pricelist-flu-test">Influenza rapid test</td>
+              <td>10.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-ear-washing">Ear washing</td>
-              <td>10.00€</td>
+              <td>20.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-wound-care">Wound care, dressing (excluding materials)</td>
-              <td>10.00€</td>
+              <td>15.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-certificate">Kindergarten or school, pool, illness certificates</td>
               <td>5.00€</td>
             </tr>
             <tr>
-              <td data-key="pricelist-prescription-working-hours">Prescription issuance outside working hours</td>
+              <td data-key="pricelist-prescription-working-hours">Prescription issuance outside of visit *during working hours</td>
               <td>5.00€</td>
             </tr>
             <tr>
-              <td data-key="pricelist-prescription-after-hours">after working hours, on holidays</td>
-              <td>5.00€</td>
-            </tr>
-            <tr>
-              <td data-key="pricelist-phone-consultation">Phone consultations outside working hours, on holidays</td>
+              <td data-key="pricelist-prescription-after-hours">*after working hours, on holidays</td>
               <td>10.00€</td>
+            </tr>
+            <tr>
+              <td data-key="pricelist-dnl-visit">Sick leave certificate opening during visit</td>
+              <td>5.00€</td>
+            </tr>
+            <tr>
+              <td data-key="pricelist-dnl-outside">*outside of visit with subsequent follow-up visit</td>
+              <td>10.00€</td>
+            </tr>
+            <tr>
+              <td data-key="pricelist-phone-consultation">Phone consultations *during working hours</td>
+              <td>20.00€</td>
+            </tr>
+            <tr>
+              <td data-key="pricelist-phone-consultation-holidays">*holidays, weekends</td>
+              <td>25.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-medical-card">Preparation of medical card extracts</td>
@@ -685,63 +728,63 @@ function loadSection(section) {
             </tr>
             <tr>
                 <td data-key="ticovac-children"></td>
-                <td>31.00€</td>
-            </tr>
-            <tr>
-                <td data-key="ticovac-adult"></td>
-                <td>33.00€</td>
-            </tr>
-            <tr>
-                <td data-key="tetraxim"></td>
-                <td>30.00€</td>
-            </tr>
-            <tr>
-                <td data-key="adacel"></td>
                 <td>36.00€</td>
             </tr>
             <tr>
-                <td data-key="appexnar-prevenar20"></td>
-                <td>80.00€</td>
+                <td data-key="ticovac-adult"></td>
+                <td>38.00€</td>
             </tr>
             <tr>
-                <td data-key="vaxigrip-tetra"></td>
-                <td>17.00€</td>
+                <td data-key="infanrix-hexa"></td>
+                <td>70.00€</td>
             </tr>
             <tr>
-                <td data-key="engerix-b-adult"></td>
-                <td>28.00€</td>
-            </tr>
-            <tr>
-                <td data-key="twinrix-adult"></td>
-                <td>50.00€</td>
-            </tr>
-            <tr>
-                <td data-key="hepatits-a-children"></td>
-                <td>30.00€</td>
-            </tr>
-            <tr>
-                <td data-key="hepatits-a-adult"></td>
+                <td data-key="tetraxim"></td>
                 <td>40.00€</td>
             </tr>
             <tr>
+                <td data-key="adacel"></td>
+                <td>40.00€</td>
+            </tr>
+            <tr>
+                <td data-key="appexnar-prevenar20"></td>
+                <td>100.00€</td>
+            </tr>
+            <tr>
+                <td data-key="vaxigrip-tetra"></td>
+                <td>25.00€</td>
+            </tr>
+            <tr>
+                <td data-key="engerix-b-adult"></td>
+                <td>40.00€</td>
+            </tr>
+            <tr>
+                <td data-key="twinrix-adult"></td>
+                <td>70.00€</td>
+            </tr>
+            <tr>
+                <td data-key="hepatits-a-adult"></td>
+                <td>55.00€</td>
+            </tr>
+            <tr>
                 <td data-key="gardasil"></td>
-                <td>165.00€</td>
+                <td>195.00€</td>
             </tr>
             <tr>
                 <td data-key="nimenrix"></td>
-                <td>55.00€</td>
+                <td>80.00€</td>
             </tr>
             <tr>
                 <td data-key="mmrvaxpro"></td>
-                <td>22.00€</td>
+                <td>35.00€</td>
             </tr>
             <tr>
                 <td data-key="varivax"></td>
-                <td>55.00€</td>
+                <td>80.00€</td>
             </tr>
             <tr>
                 <td data-key="rota-teq"></td>
-                <td>55.00€</td>
+                <td>65.00€</td>
             </tr>
             </table>
             <p data-key="vaccination-free-text"></p>
