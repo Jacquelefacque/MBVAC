@@ -110,6 +110,7 @@ const translations = {
     "pricelist-muscle-injection": "Intramuscular injection",
     "pricelist-vein-injection": "Intravenous injection",
     "pricelist-iv-system": "IV system placement and monitoring",
+    "pricelist-iv-from": "from",
     "pricelist-inhalation": "Inhalation",
     "pricelist-crp-test": "CRP rapid test",
     "pricelist-sugar-test": "Blood sugar rapid test",
@@ -124,12 +125,12 @@ const translations = {
     "pricelist-prescription-working-hours":
       "Prescription issuance outside of visit *during working hours",
     "pricelist-prescription-after-hours": "*after working hours, on holidays",
-    "pricelist-dnl-visit": "Sick leave certificate opening during visit",
+    "pricelist-dnl-visit": "<b>Sick leave certificate opening during visit</b>",
     "pricelist-dnl-outside":
       "*outside of visit with subsequent follow-up visit",
     "pricelist-phone-consultation":
-      "Phone consultations *during working hours",
-    "pricelist-phone-consultation-holidays": "*holidays, weekends",
+      "<b>Phone consultations *during working hours</b>",
+    "pricelist-phone-consultation-holidays": "<b>*holidays, weekends</b>",
     "pricelist-medical-card": "Preparation of medical card extracts",
     "pricelist-kindergarten-card":
       "Preparation of kindergarten or school medical card",
@@ -310,6 +311,7 @@ const translations = {
     "pricelist-muscle-injection": "Injekcija muskulī",
     "pricelist-vein-injection": "Injekcija vēnā",
     "pricelist-iv-system": "i/v sistēmas uzlikšana un novērošana",
+    "pricelist-iv-from": "no",
     "pricelist-inhalation": "Inhalācija",
     "pricelist-crp-test": "CRO ekspresdiagnostika",
     "pricelist-sugar-test": "Cukura ekspresdiagnostika",
@@ -325,13 +327,13 @@ const translations = {
     "pricelist-prescription-after-hours":
       "*pēc darba laika beigām, brīvdienās",
     "pricelist-dnl-visit":
-      "DNL ('slimības lapa') atvēršana vizītes laikā",
+      "<b>DNL ('slimības lapa') atvēršana vizītes laikā</b>",
     "pricelist-dnl-outside":
       "*ārpus vizītes ar pēc tam sekojošu vizīti",
     "pricelist-phone-consultation":
-      "Telefona konsultācijas *darba laikā",
+      "<b>Telefona konsultācijas *darba laikā</b>",
     "pricelist-phone-consultation-holidays":
-      "*brīvdienas, svētku dienas",
+      "<b>*brīvdienas, svētku dienas</b>",
     "pricelist-medical-card": "Medicīniskās kartes izraksta sagatavošana",
     "pricelist-kindergarten-card":
       "Bērnudārza vai skolas medicīniskās kartes sagatavošana",
@@ -636,7 +638,7 @@ function loadSection(section) {
             </tr>
             <tr>
               <td data-key="pricelist-iv-system">i/v sistēmas uzlikšana un novērošana</td>
-              <td>80.00€</td>
+              <td><span data-key="pricelist-iv-from"></span> 80.00€</td>
             </tr>
             <tr>
               <td data-key="pricelist-inhalation">Inhalācija</td>
