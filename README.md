@@ -8,14 +8,15 @@
  - Responsive design (mobile, tablet, desktop)
 
  ## Features
- - **Navigation**: SPA-style section loading without full page reloads
+ - **Navigation**: Shareable hash routes (`#home`, `#services`, `#pricelist`, `#gallery`, `#about`, `#contacts`) with browser Back/Forward support and a compact mobile menu
  - **Services & Price List**: Localized text via a `translations` object
- - **Contacts**: Embedded Google Maps, protected contact info assembled in JS
+ - **Contacts**: Homepage booking action and opening hours; clickable phone, email, and directions links; embedded Google Maps on Contacts
  - **Gallery**:
-   - Thumbnail grid of images from the `gallery/` folder
-   - Lightbox overlay with previous/next navigation and close control
+   - Lazy-loaded WebP thumbnails with larger photos loaded on demand
+   - Native dialog with previous/next buttons, arrow keys, Escape, and focus restoration
    - Hover lift effect matching service items
- - **Accessibility**: Keyboard‐accessible layout, high-contrast elements, ramp and stroller info included in translations
+ - **Accessibility**: Keyboard controls, skip link, visible focus, descriptive image labels, reduced-motion support, and matching document language for English and Latvian
+ - **Images**: Responsive homepage sources and compressed portraits; originals preserved for future editing
 
  ## Installation & Usage
  1. Clone this repository.
@@ -23,9 +24,13 @@
  3. No build tools or additional servers required.
 
  ## Dependencies & Licenses
- - [flag-icon-css](https://github.com/lipis/flag-icon-css) (MIT)
- - [Font Awesome Free](https://fontawesome.com/) (Free for commercial use)
- - No server-side code or backend dependencies.
+ - No runtime JavaScript, font, or icon dependencies. No server-side code or build step.
+ - Google Maps is embedded on the Contacts page.
+
+ ## Development Checks
+ - JavaScript syntax: `node --check script.js`
+ - Browser regression checks: with Playwright and its Chromium browser installed, run `node tests/smoke.cjs`. The test starts and stops its own local server. `PLAYWRIGHT_MODULE` and `BROWSER_EXECUTABLE` can point to existing installations; `SCREENSHOT_DIR` optionally saves visual review images.
+ - Rebuild image derivatives: with Python and Pillow installed, run `python tools/optimize_images.py`. This writes WebP files and their dimensions to `assets/images/` without modifying the originals.
 
  ## Compliance & Policy
  - All code is original or uses permissively licensed assets. No proprietary or restricted libraries are included.
