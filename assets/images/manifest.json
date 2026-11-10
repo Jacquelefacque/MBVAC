@@ -1,0 +1,184 @@
+[
+  {
+    "source": "motherchild.png",
+    "file": "assets/images/motherchild-480.webp",
+    "width": 480,
+    "height": 198,
+    "bytes": 12772
+  },
+  {
+    "source": "motherchild.png",
+    "file": "assets/images/motherchild-800.webp",
+    "width": 800,
+    "height": 331,
+    "bytes": 26824
+  },
+  {
+    "source": "motherchild.png",
+    "file": "assets/images/motherchild-1200.webp",
+    "width": 1200,
+    "height": 496,
+    "bytes": 51380
+  },
+  {
+    "source": "guna.png",
+    "file": "assets/images/guna-300.webp",
+    "width": 212,
+    "height": 200,
+    "bytes": 13948
+  },
+  {
+    "source": "liga.png",
+    "file": "assets/images/liga-300.webp",
+    "width": 288,
+    "height": 280,
+    "bytes": 16436
+  },
+  {
+    "source": "meldra.png",
+    "file": "assets/images/meldra-300.webp",
+    "width": 298,
+    "height": 300,
+    "bytes": 14548
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0001.jpg",
+    "file": "assets/images/gallery-01-thumb.webp",
+    "width": 480,
+    "height": 360,
+    "bytes": 18780
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0001.jpg",
+    "file": "assets/images/gallery-01.webp",
+    "width": 1200,
+    "height": 900,
+    "bytes": 79550
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0002.jpg",
+    "file": "assets/images/gallery-02-thumb.webp",
+    "width": 480,
+    "height": 360,
+    "bytes": 13906
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0002.jpg",
+    "file": "assets/images/gallery-02.webp",
+    "width": 1200,
+    "height": 900,
+    "bytes": 63856
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0003.jpg",
+    "file": "assets/images/gallery-03-thumb.webp",
+    "width": 480,
+    "height": 360,
+    "bytes": 15516
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0003.jpg",
+    "file": "assets/images/gallery-03.webp",
+    "width": 1200,
+    "height": 900,
+    "bytes": 65780
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0004.jpg",
+    "file": "assets/images/gallery-04-thumb.webp",
+    "width": 480,
+    "height": 360,
+    "bytes": 18048
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0004.jpg",
+    "file": "assets/images/gallery-04.webp",
+    "width": 1200,
+    "height": 900,
+    "bytes": 79242
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0005.jpg",
+    "file": "assets/images/gallery-05-thumb.webp",
+    "width": 480,
+    "height": 360,
+    "bytes": 19736
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0005.jpg",
+    "file": "assets/images/gallery-05.webp",
+    "width": 1200,
+    "height": 900,
+    "bytes": 85564
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0006.jpg",
+    "file": "assets/images/gallery-06-thumb.webp",
+    "width": 480,
+    "height": 360,
+    "bytes": 17714
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0006.jpg",
+    "file": "assets/images/gallery-06.webp",
+    "width": 1200,
+    "height": 900,
+    "bytes": 74706
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0007.jpg",
+    "file": "assets/images/gallery-07-thumb.webp",
+    "width": 480,
+    "height": 360,
+    "bytes": 22988
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0007.jpg",
+    "file": "assets/images/gallery-07.webp",
+    "width": 1200,
+    "height": 900,
+    "bytes": 103022
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0008.jpg",
+    "file": "assets/images/gallery-08-thumb.webp",
+    "width": 480,
+    "height": 360,
+    "bytes": 16136
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0008.jpg",
+    "file": "assets/images/gallery-08.webp",
+    "width": 1200,
+    "height": 900,
+    "bytes": 68280
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0009.jpg",
+    "file": "assets/images/gallery-09-thumb.webp",
+    "width": 360,
+    "height": 480,
+    "bytes": 14704
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0009.jpg",
+    "file": "assets/images/gallery-09.webp",
+    "width": 900,
+    "height": 1200,
+    "bytes": 91226
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0010.jpg",
+    "file": "assets/images/gallery-10-thumb.webp",
+    "width": 480,
+    "height": 360,
+    "bytes": 15792
+  },
+  {
+    "source": "gallery/IMG-20250612-WA0010.jpg",
+    "file": "assets/images/gallery-10.webp",
+    "width": 1200,
+    "height": 900,
+    "bytes": 66796
+  }
+]

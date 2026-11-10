@@ -1,5 +1,35 @@
 const translations = {
   en: {
+    "site-name": "Mother and Child Health Care Center",
+    "site-description": "Pediatric care in Rīga. Meet our team, explore services and prices, and call 29456983 to arrange a visit.",
+    "skip-content": "Skip to content",
+    "menu-toggle": "Menu",
+    "primary-navigation": "Main navigation",
+    "language-selector": "Choose language",
+    "hero-eyebrow": "Pediatric care in Rīga · Since 2010",
+    "hero-title": "Care for your child, support for your family.",
+    "hero-description": "A personal approach to your child’s health, from their first days through adolescence.",
+    "call-to-book": "Call to book a visit",
+    "see-services": "Explore our services",
+    "visit-title": "Plan your visit",
+    "find-us": "Find us",
+    "directions": "Get directions",
+    "entrance-note": "Entrance from the courtyard between buildings 91 and 93.",
+    "email-label": "Email",
+    "footer-call": "Call us",
+    "map-title": "Map showing the medical center at Aleksandra Čaka 91, Rīga",
+    "hero-image-alt": "A newborn being held at the medical center",
+    "gallery-open": "View photo",
+    "gallery-close": "Close photo",
+    "gallery-prev": "Previous photo",
+    "gallery-next": "Next photo",
+    monday: "Monday",
+    tuesday: "Tuesday",
+    wednesday: "Wednesday",
+    thursday: "Thursday",
+    friday: "Friday",
+    closed: "Closed",
+    "lunch-break": "Lunch break: 13:00–13:30.",
     home: "Home",
     services: "Services",
     pricelist: "Price List",
@@ -33,7 +63,6 @@ const translations = {
       "At our medical center, you can also visit a massage therapist, physiotherapist, or Bowen therapy specialist, Meldra Lūse.",
     "contacts-title": "Contacts",
     address: "Address: Aleksandra Čaka 91-3, Rīga",
-    phone: "Phone: ",
     "mobile-phone": "Mobile phone: ",
     "working-hours-title": "Medical Center Working Hours:",
     "working-hours": `
@@ -80,7 +109,7 @@ const translations = {
                 <li>Muscle relaxation after mental and physical overloads, using several massage methods</li>
             </ul>
         `,
-    "pricelist-pediatre": "Pediatrican Guna Deksne",
+    "pricelist-pediatre": "Pediatrician Guna Deksne",
     "pricelist-service": "Service",
     "pricelist-price": "Price",
     "pricelist-prophylactic": "Prophylactic examination (60min)",
@@ -200,6 +229,36 @@ const translations = {
         `,
   },
   lv: {
+    "site-name": "Mātes un bērna veselības aprūpes centrs",
+    "site-description": "Bērnu veselības aprūpe Rīgā. Iepazīstiet mūsu komandu, pakalpojumus un cenrādi. Pierakstieties vizītei pa tālruni 29456983.",
+    "skip-content": "Pāriet uz saturu",
+    "menu-toggle": "Izvēlne",
+    "primary-navigation": "Galvenā navigācija",
+    "language-selector": "Izvēlēties valodu",
+    "hero-eyebrow": "Bērnu veselības aprūpe Rīgā · Kopš 2010. gada",
+    "hero-title": "Rūpes par bērnu, atbalsts ģimenei.",
+    "hero-description": "Individuāla pieeja jūsu bērna veselībai no pirmajām dzīves dienām līdz pusaudža vecumam.",
+    "call-to-book": "Zvanīt un pieteikt vizīti",
+    "see-services": "Apskatīt pakalpojumus",
+    "visit-title": "Plānojiet savu vizīti",
+    "find-us": "Kā mūs atrast",
+    "directions": "Skatīt maršrutu",
+    "entrance-note": "Ieeja no pagalma starp 91. un 93. namu.",
+    "email-label": "E-pasts",
+    "footer-call": "Zvaniet mums",
+    "map-title": "Karte ar medicīnas centra atrašanās vietu Aleksandra Čaka ielā 91, Rīgā",
+    "hero-image-alt": "Jaundzimušais tiek turēts rokās medicīnas centrā",
+    "gallery-open": "Apskatīt attēlu",
+    "gallery-close": "Aizvērt attēlu",
+    "gallery-prev": "Iepriekšējais attēls",
+    "gallery-next": "Nākamais attēls",
+    monday: "Pirmdiena",
+    tuesday: "Otrdiena",
+    wednesday: "Trešdiena",
+    thursday: "Ceturtdiena",
+    friday: "Piektdiena",
+    closed: "Slēgts",
+    "lunch-break": "Pusdienas pārtraukums: 13:00–13:30.",
     home: "Sākums",
     services: "Pakalpojumi",
     pricelist: "Cenrādis",
@@ -233,7 +292,6 @@ const translations = {
       "Mūsu medicīnas centrā iespējams apmeklēt arī masieri, fizioterapeitu vai Bovena terapijas speciālisti Meldru Lūsi.",
     "contacts-title": "Kontakti",
     address: "Prakses adrese: Aleksandra Čaka 91-3, Rīga",
-    phone: "Tālrunis:",
     "mobile-phone": "Mobilais tālrunis:",
     "working-hours-title": "Medicīnas centra darba laiks:",
     "working-hours": `
@@ -373,73 +431,126 @@ const translations = {
   },
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  const currentLang = localStorage.getItem("currentLanguage") || "en";
-  setLanguage(currentLang);
-  loadSection("home");
-  setActiveMenuItem("home");
+const GALLERY = [
+  { id: "01", en: "Examination room with an examination couch and desk", lv: "Apskates kabinets ar kušeti un rakstāmgaldu" },
+  { id: "02", en: "Clinic hallway with waiting chairs", lv: "Medicīnas centra gaitenis ar uzgaidāmajiem krēsliem" },
+  { id: "03", en: "Doctor’s desk beside the examination room", lv: "Ārsta rakstāmgalds pie apskates telpas" },
+  { id: "04", en: "Examination couch and doctor’s workspace", lv: "Apskates kušete un ārsta darba vieta" },
+  { id: "05", en: "Treatment room with an examination couch and supplies", lv: "Procedūru kabinets ar kušeti un piederumiem" },
+  { id: "06", en: "Examination couch with a changing pad", lv: "Apskates kušete ar pārtīšanas paliktni" },
+  { id: "07", en: "Treatment couch and medical equipment", lv: "Procedūru kušete un medicīnas aprīkojums" },
+  { id: "08", en: "Entrance to the treatment room", lv: "Ieeja procedūru kabinetā" },
+  { id: "09", en: "Waiting area in the clinic hallway", lv: "Uzgaidāmā vieta medicīnas centra gaitenī" },
+  { id: "10", en: "View from the desk into the examination room", lv: "Skats no rakstāmgalda uz apskates telpu" },
+];
+let galleryIndex = 0;
+let galleryOpener = null;
 
-  document.querySelectorAll(".flag-icon").forEach((icon) => {
-    icon.addEventListener("click", function () {
-      const lang = this.getAttribute("data-lang");
-      setLanguage(lang);
-    });
+const CONTACT = {
+  phone: "29456983",
+  phoneHref: "tel:+37129456983",
+  email: "medcentrs@gmail.com",
+  directions: "https://www.google.com/maps/dir/?api=1&destination=Aleksandra%20%C4%8Caka%20iela%2091%2C%20R%C4%ABga%2C%20Latvia",
+};
+const SECTIONS = ["home", "services", "pricelist", "gallery", "about", "contacts"];
+let currentLanguage = "en";
+let currentSection = "home";
+
+try {
+  const savedLanguage = localStorage.getItem("currentLanguage");
+  if (Object.hasOwn(translations, savedLanguage)) currentLanguage = savedLanguage;
+} catch {
+  // Navigation and translation still work when storage is unavailable.
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".language-button").forEach((button) => {
+    button.addEventListener("click", () => setLanguage(button.dataset.lang));
   });
-
-  document.querySelectorAll(".menu-item").forEach((item) => {
-    item.addEventListener("click", function (e) {
-      e.preventDefault();
-      const section = this.getAttribute("data-section");
-
-      if (section === "about") {
-        loadSection("home");
-        setActiveMenuItem("about");
-        setTimeout(() => {
-          const aboutEl = document.querySelector(".about");
-          if (aboutEl) {
-            aboutEl.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
-      } else {
-        loadSection(section);
-        setActiveMenuItem(section);
+  const menuToggle = document.getElementById("menu-toggle");
+  menuToggle.addEventListener("click", () => {
+    setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+      setMenuOpen(false);
+      menuToggle.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const target = link.getAttribute("href").slice(1);
+    if (target === "main-content") {
+      event.preventDefault();
+      document.getElementById("main-content").focus();
+    } else if (SECTIONS.includes(target)) {
+      // Keep normal anchor behavior, including native history and copyable URLs.
+      setMenuOpen(false);
+      if (location.hash === `#${target}`) {
+        event.preventDefault();
+        renderRoute(true);
       }
-    });
+    }
   });
+  window.matchMedia("(min-width: 701px)").addEventListener("change", () => setMenuOpen(false));
+  window.addEventListener("hashchange", () => renderRoute(true));
+  document.querySelectorAll(".current-year").forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
+  setupGalleryLightbox();
+  renderRoute(false);
 });
-function renderContactInfo() {
-  const mainContent = document.getElementById("main-content");
-  const phoneEl = mainContent.querySelector('[data-key="phone"]');
-  const mobileEl = mainContent.querySelector('[data-key="mobile-phone"]');
-  const hearingEl = mainContent.querySelector(
-    '[data-key="hearing-impaired-info"]'
-  );
 
-  const phoneParts = ["67", "27", "1384"];
-  const mobileParts = ["29", "45", "6983"];
-  const emailParts = ["medcentrs", "@", "gmail", ".com"];
-  const phone = phoneParts.join("");
-  const mobile = mobileParts.join("");
-  const email = emailParts.join("");
+function setMenuOpen(open) {
+  document.querySelector("header").classList.toggle("menu-open", open);
+  document.getElementById("menu-toggle").setAttribute("aria-expanded", String(open));
+}
 
-  const currentLang = localStorage.getItem("currentLanguage") || "en";
-  const basePhone = translations[currentLang]["phone"];
-  const baseMobile = translations[currentLang]["mobile-phone"];
-  const baseHearing = translations[currentLang]["hearing-impaired-info"];
-
-  if (phoneEl) {
-    phoneEl.textContent = basePhone + " " + phone;
+function renderRoute(moveFocus) {
+  const requested = location.hash.slice(1);
+  const section = SECTIONS.includes(requested) ? requested : "home";
+  if (requested && !SECTIONS.includes(requested)) {
+    history.replaceState(null, "", `${location.pathname}${location.search}#home`);
   }
-  if (mobileEl) {
-    mobileEl.textContent = baseMobile + " " + mobile;
-  }
-  if (hearingEl) {
-    hearingEl.textContent = baseHearing.trim() + " " + email;
+  const lightbox = document.getElementById("lightbox");
+  if (lightbox.open) lightbox.close();
+  currentSection = section;
+  loadSection(section);
+  setActiveMenuItem(section);
+  setMenuOpen(false);
+  if (moveFocus) {
+    document.getElementById("main-content").focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: "instant" });
   }
 }
 
+function hoursMarkup(includeLunch = true) {
+  const hours = [
+    ["monday", "10:00–17:00"], ["tuesday", "10:00–17:00"],
+    ["wednesday", null], ["thursday", "13:00–19:00"], ["friday", "10:00–14:00"],
+  ];
+  return `<dl class="hours-list">${hours.map(([day, time]) =>
+    `<div><dt data-key="${day}"></dt><dd${time ? "" : ' data-key="closed"'}>${time || ""}</dd></div>`
+  ).join("")}</dl>${includeLunch ? '<p class="hours-note" data-key="lunch-break"></p>' : ""}`;
+}
+
+function renderContactInfo() {
+  document.querySelectorAll("[data-contact-phone]").forEach((link) => {
+    link.href = CONTACT.phoneHref;
+    link.textContent = CONTACT.phone;
+  });
+  document.querySelectorAll("[data-contact-email]").forEach((link) => {
+    link.href = `mailto:${CONTACT.email}`;
+    link.textContent = CONTACT.email;
+  });
+}
+
 function setLanguage(lang) {
-  localStorage.setItem("currentLanguage", lang);
+  currentLanguage = Object.hasOwn(translations, lang) ? lang : "en";
+  lang = currentLanguage;
+  try { localStorage.setItem("currentLanguage", lang); } catch { /* Optional preference. */ }
+  document.documentElement.lang = lang;
   document.querySelectorAll("[data-key]").forEach((el) => {
     const key = el.getAttribute("data-key");
     if (translations[lang] && translations[lang][key]) {
@@ -452,16 +563,50 @@ function setLanguage(lang) {
     }
   });
 
-  document.querySelectorAll(".flag-icon").forEach((icon) => {
-    icon.classList.remove("active");
-    if (icon.getAttribute("data-lang") === lang) {
-      icon.classList.add("active");
-    }
+  document.querySelectorAll(".language-button").forEach((button) => {
+    const active = button.dataset.lang === lang;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
   });
-
-  if (document.querySelector(".contacts")) {
-    renderContactInfo();
+  for (const [selector, attribute, key] of [
+    ["[data-aria-key]", "aria-label", "ariaKey"],
+    ["[data-alt-key]", "alt", "altKey"],
+    ["[data-title-key]", "title", "titleKey"],
+  ]) {
+    document.querySelectorAll(selector).forEach((el) => {
+      el.setAttribute(attribute, translations[lang][el.dataset[key]]);
+    });
   }
+  const titleKey = { about: "about-menu", gallery: "gallery-menu" }[currentSection] || currentSection;
+  document.title = `${translations[lang][titleKey]} | ${translations[lang]["site-name"]}`;
+  document.querySelector('meta[name="description"]').content = translations[lang]["site-description"];
+  renderContactInfo();
+  updateGalleryLabels();
+}
+
+function teamMarkup() {
+  return `
+      <section class="team">
+        <h2 data-key="team-title">OUR TEAM</h2>
+        <div class="team-container">
+          <div class="team-member">
+            <img src="assets/images/guna-300.webp" width="212" height="200" alt="Dr. Guna Deksne" loading="lazy" decoding="async" />
+            <h3>Dr. Guna Deksne</h3>
+            <p data-key="team-member-1-description"></p>
+          </div>
+          <div class="team-member">
+            <img src="assets/images/liga-300.webp" width="288" height="280" alt="Līga Vēvere Kalniete" loading="lazy" decoding="async" />
+            <h3>Līga Vēvere Kalniete</h3>
+            <p data-key="team-member-2-description"></p>
+          </div>
+          <div class="team-member">
+            <img src="assets/images/meldra-300.webp" width="298" height="300" alt="Meldra Lūse" loading="lazy" decoding="async" />
+            <h3>Meldra Lūse</h3>
+            <p data-key="team-member-3-description"></p>
+          </div>
+        </div>
+      </section>
+  `;
 }
 
 function loadSection(section) {
@@ -470,9 +615,37 @@ function loadSection(section) {
   if (section === "home") {
     html = `
       <section class="hero">
-        <img src="motherchild.png" alt="Mother holding newborn" />
+        <div class="hero-content">
+          <p class="eyebrow" data-key="hero-eyebrow"></p>
+          <h1 data-key="hero-title"></h1>
+          <p class="lead" data-key="hero-description"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="${CONTACT.phoneHref}" data-key="call-to-book"></a>
+            <a class="button button-secondary" href="#services" data-key="see-services"></a>
+          </div>
+          <a class="hero-phone" href="${CONTACT.phoneHref}" data-contact-phone></a>
+        </div>
+        <picture class="hero-image">
+          <source type="image/webp"
+            srcset="assets/images/motherchild-480.webp 480w, assets/images/motherchild-800.webp 800w, assets/images/motherchild-1200.webp 1200w"
+            sizes="(max-width: 400px) calc(100vw - 24px), (max-width: 700px) calc(100vw - 32px), (max-width: 1248px) 45vw, 562px" />
+          <img src="assets/images/motherchild-1200.webp" width="1200" height="496"
+            data-alt-key="hero-image-alt" alt="A newborn being held at the medical center" fetchpriority="high" />
+        </picture>
       </section>
-      <section class="services">
+      <section class="visit-summary" aria-labelledby="visit-title">
+        <div>
+          <h2 id="visit-title" data-key="visit-title"></h2>
+          <p data-key="address"></p>
+          <p data-key="entrance-note"></p>
+          <a href="${CONTACT.directions}" data-key="directions"></a>
+        </div>
+        <div>
+          <h2 data-key="working-hours-title"></h2>
+          ${hoursMarkup()}
+        </div>
+      </section>
+      <section class="service-highlights">
         <div class="service-box">
           <h2 data-key="prevention-title">PREVENTION</h2>
           <p data-key="prevention-description"></p>
@@ -493,53 +666,35 @@ function loadSection(section) {
         <p data-key="about-description-3"></p>
         <p data-key="about-description-4"></p>
       </section>
-      <section class="team">
-        <h2 data-key="team-title">OUR TEAM</h2>
-        <div class="team-container">
-          <div class="team-member">
-            <img src="guna.png" alt="Dr. Guna Deksne" />
-            <h3>Dr. Guna Deksne</h3>
-            <p data-key="team-member-1-description"></p>
-          </div>
-          <div class="team-member">
-            <img src="liga.png" alt="Līga Vēvere Kalniete" />
-            <h3>Līga Vēvere Kalniete</h3>
-            <p data-key="team-member-2-description"></p>
-          </div>
-          <div class="team-member">
-            <img src="meldra.png" alt="Meldra Lūse" />
-            <h3>Meldra Lūse</h3>
-            <p data-key="team-member-3-description"></p>
-          </div>
-        </div>
-      </section>
+      ${teamMarkup()}
     `;
   } else if (section === "services") {
     html = `
       <section class="services">
+        <h1 class="section-title" data-key="services-title"></h1>
         <div class="service-grid">
           <div class="service-item">
-            <h3 data-key="newborn-care-title">Newborn Care</h3>
+            <h2 data-key="newborn-care-title">Newborn Care</h2>
             <p data-key="newborn-care-description"></p>
           </div>
           <div class="service-item">
-            <h3 data-key="healthy-child-care-title">Healthy Child Care</h3>
+            <h2 data-key="healthy-child-care-title">Healthy Child Care</h2>
             <p data-key="healthy-child-care-description"></p>
           </div>
           <div class="service-item">
-            <h3 data-key="sick-child-care-title">Sick Child Care</h3>
+            <h2 data-key="sick-child-care-title">Sick Child Care</h2>
             <p data-key="sick-child-care-description"></p>
           </div>
           <div class="service-item">
-            <h3 data-key="vaccination-title-big-services">Vaccination</h3>
+            <h2 data-key="vaccination-title-big-services">Vaccination</h2>
             <p data-key="vaccination-description"></p>
           </div>
           <div class="service-item">
-            <h3 data-key="certificates-title">Certificates</h3>
+            <h2 data-key="certificates-title">Certificates</h2>
             <div data-key="certificates-description"></div>
           </div>
           <div class="service-item">
-            <h3 data-key="massage-title">Massage</h3>
+            <h2 data-key="massage-title">Massage</h2>
             <div data-key="massage-description"></div>
           </div>
         </div>
@@ -548,9 +703,9 @@ function loadSection(section) {
   } else if (section === "pricelist") {
     html = `
       <section class="pricelist">
-        <h2 class="section-title" data-key="pricelist"></h2>
+        <h1 class="section-title" data-key="pricelist"></h1>
         <div class="pricelist-container">
-          <h3 data-key="pricelist-pediatre">Pediatrican Guna Deksne</h3>
+          <h2 data-key="pricelist-pediatre">Pediatrician Guna Deksne</h2>
           <table class="pricelist-table">
             <tr>
               <th data-key="pricelist-service">Service</th>
@@ -594,7 +749,7 @@ function loadSection(section) {
             </tr>
           </table>
           
-          <h3 data-key="pricelist-nurse">Sertificēta bērnu aprūpes māsa Līga Vēvere Kalniete</h3>
+          <h2 data-key="pricelist-nurse">Sertificēta bērnu aprūpes māsa Līga Vēvere Kalniete</h2>
           <table class="pricelist-table">
             <tr>
               <th data-key="pricelist-service">Service</th>
@@ -722,7 +877,7 @@ function loadSection(section) {
             </tr>
           </table>
           
-          <h3 data-key="pricelist-vaccination">Vaccination</h3>
+          <h2 data-key="pricelist-vaccination">Vaccination</h2>
           <table class="pricelist-table">
             <tr>
                 <th data-key="vaccine-title">Vaccine</th>
@@ -796,47 +951,46 @@ function loadSection(section) {
   } else if (section === "gallery") {
     html = `
       <section class="gallery">
+        <h1 class="section-title" data-key="gallery-title"></h1>
         <div class="gallery-grid">
-          <img src="gallery/IMG-20250612-WA0001.jpg" alt="" />
-          <img src="gallery/IMG-20250612-WA0002.jpg" alt="" />
-          <img src="gallery/IMG-20250612-WA0003.jpg" alt="" />
-          <img src="gallery/IMG-20250612-WA0004.jpg" alt="" />
-          <img src="gallery/IMG-20250612-WA0005.jpg" alt="" />
-          <img src="gallery/IMG-20250612-WA0006.jpg" alt="" />
-          <img src="gallery/IMG-20250612-WA0007.jpg" alt="" />
-          <img src="gallery/IMG-20250612-WA0008.jpg" alt="" />
-          <img src="gallery/IMG-20250612-WA0009.jpg" alt="" />
-          <img src="gallery/IMG-20250612-WA0010.jpg" alt="" />
+          ${GALLERY.map((photo, index) => `
+            <button class="gallery-trigger" type="button" data-gallery-index="${index}">
+              <img src="assets/images/gallery-${photo.id}-thumb.webp" alt=""
+                width="${photo.id === "09" ? 360 : 480}" height="${photo.id === "09" ? 480 : 360}"
+                loading="lazy" decoding="async" />
+            </button>`).join("")}
         </div>
       </section>
     `;
   } else if (section === "about") {
     html = `
       <section class="about">
-        <h2 data-key="about-title">About our center</h2>
+        <h1 data-key="about-title">About our center</h1>
         <p data-key="about-description-1"></p>
         <p data-key="about-description-2"></p>
         <p data-key="about-description-3"></p>
         <p data-key="about-description-4"></p>
       </section>
+      ${teamMarkup()}
     `;
   } else if (section === "contacts") {
     html = `
       <section class="contacts">
-        <h2 class="section-title" data-key="contacts-title">Contacts</h2>
+        <h1 class="section-title" data-key="contacts-title">Contacts</h1>
         <div class="contact-grid">
           <div class="contact-info">
             <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
               <p data-key="address"></p>
             </div>
             <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <p data-key="phone"></p>
+              <p><span data-key="mobile-phone"></span> <a href="${CONTACT.phoneHref}" data-contact-phone></a></p>
             </div>
             <div class="contact-item">
-              <i class="fas fa-mobile-alt"></i>
-              <p data-key="mobile-phone"></p>
+              <p><span data-key="email-label"></span>: <a href="mailto:${CONTACT.email}" data-contact-email></a></p>
+            </div>
+            <div class="hero-actions">
+              <a class="button button-primary" href="${CONTACT.phoneHref}" data-key="call-to-book"></a>
+              <a class="button button-secondary" href="${CONTACT.directions}" data-key="directions"></a>
             </div>
           </div>
           <div class="map-container">
@@ -844,6 +998,8 @@ function loadSection(section) {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2177.7363782854196!2d24.13855731556263!3d56.95103018089233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfd5eb9d5e0b%3A0xa30a46b5edc2922e!2sAleksandra%20%C4%8Caka%20iela%2091%2C%20R%C4%ABga%2C%20LV-1011%2C%20Latvia!5e0!3m2!1sen!2sus!4v1626182723205!5m2!1sen!2sus"
               width="100%"
               height="450"
+              data-title-key="map-title"
+              title="Map showing the medical center in Rīga"
               style="border:0;"
               allowfullscreen=""
               loading="lazy">
@@ -852,96 +1008,120 @@ function loadSection(section) {
         </div>
         <div class="hours-section">
           <div class="hours-column">
-            <h3 data-key="working-hours-title"></h3>
-            <p data-key="working-hours"></p>
+            <h2 data-key="working-hours-title"></h2>
+            ${hoursMarkup()}
           </div>
           <div class="hours-column">
-            <h3 data-key="doctor-hours-title"></h3>
-            <p data-key="doctor-hours"></p>
+            <h2 data-key="doctor-hours-title"></h2>
+            ${hoursMarkup(false)}
           </div>
         </div>
-        <div class="notices">
-          <p data-key="notice-1"></p>
-          <p data-key="notice-2"></p>
-        </div>
         <div class="accessibility-info">
-          <h3 data-key="accessibility-title"></h3>
+          <h2 data-key="accessibility-title"></h2>
           <p data-key="accessibility"></p>
         </div>
         <div class="stroller-info">
-          <h3 data-key="stroller-info-title"></h3>
+          <h2 data-key="stroller-info-title"></h2>
           <p data-key="stroller-info"></p>
         </div>
         <div class="hearing-impaired-info">
           <p data-key="hearing-impaired-info"></p>
+          <a href="mailto:${CONTACT.email}" data-contact-email></a>
         </div>
       </section>
     `;
   }
   mainContent.innerHTML = html;
-  setLanguage(localStorage.getItem("currentLanguage") || "en");
-  if (section === "contacts") {
-    renderContactInfo();
-  }
-  if (section === "gallery") {
-    setupGalleryLightbox();
-  }
+  preparePriceTables();
+  setLanguage(currentLanguage);
 }
 
 function setActiveMenuItem(section) {
   document.querySelectorAll(".menu-item").forEach((item) => {
-    item.classList.remove("active");
-    if (item.getAttribute("data-section") === section) {
-      item.classList.add("active");
-    }
+    const active = item.dataset.section === section;
+    item.classList.toggle("active", active);
+    if (active) item.setAttribute("aria-current", "page");
+    else item.removeAttribute("aria-current");
   });
 }
-/**
- * Initialize lightbox functionality for gallery images.
- */
+function preparePriceTables() {
+  document.querySelectorAll(".pricelist-table").forEach((table, index) => {
+    const heading = table.previousElementSibling;
+    heading.id = `price-group-${index}`;
+    table.setAttribute("aria-labelledby", heading.id);
+    const headerRow = table.rows[0];
+    table.createTHead().append(headerRow);
+    headerRow.querySelectorAll("th").forEach((cell) => cell.scope = "col");
+  });
+}
+
+function updateGalleryLabels() {
+  document.querySelectorAll(".gallery-trigger").forEach((button) => {
+    const photo = GALLERY[Number(button.dataset.galleryIndex)];
+    const description = photo[currentLanguage];
+    button.setAttribute("aria-label", `${translations[currentLanguage]["gallery-open"]}: ${description}`);
+    button.querySelector("img").alt = description;
+  });
+  if (document.getElementById("lightbox").open) updateLightbox();
+}
+
+function updateLightbox() {
+  const photo = GALLERY[galleryIndex];
+  const image = document.querySelector(".lightbox-img");
+  image.src = `assets/images/gallery-${photo.id}.webp`;
+  image.alt = photo[currentLanguage];
+  image.width = photo.id === "09" ? 900 : 1200;
+  image.height = photo.id === "09" ? 1200 : 900;
+  document.getElementById("lightbox-caption").textContent =
+    `${galleryIndex + 1} / ${GALLERY.length} · ${photo[currentLanguage]}`;
+}
+
+// Persistent controls are bound once; gallery thumbnails can be rendered repeatedly.
 function setupGalleryLightbox() {
   const lightbox = document.getElementById("lightbox");
-  const lightboxImg = lightbox.querySelector(".lightbox-img");
   const closeBtn = lightbox.querySelector(".lightbox-close");
   const prevBtn = lightbox.querySelector(".lightbox-prev");
   const nextBtn = lightbox.querySelector(".lightbox-next");
-  const galleryImgs = Array.from(
-    document.querySelectorAll(".gallery-grid img")
-  );
-  let currentIndex = 0;
-
-  function updateLightbox() {
-    lightboxImg.src = galleryImgs[currentIndex].src;
+  function movePhoto(step) {
+    galleryIndex = (galleryIndex + step + GALLERY.length) % GALLERY.length;
+    updateLightbox();
   }
-
-  galleryImgs.forEach((img, idx) => {
-    img.addEventListener("click", () => {
-      currentIndex = idx;
-      updateLightbox();
-      lightbox.classList.remove("hidden");
-    });
-  });
-
-  closeBtn.addEventListener("click", () => {
-    lightbox.classList.add("hidden");
-  });
-
-  prevBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    currentIndex = (currentIndex - 1 + galleryImgs.length) %
-      galleryImgs.length;
+  document.getElementById("main-content").addEventListener("click", (event) => {
+    const trigger = event.target.closest(".gallery-trigger");
+    if (!trigger) return;
+    galleryIndex = Number(trigger.dataset.galleryIndex);
+    galleryOpener = trigger;
     updateLightbox();
+    lightbox.showModal();
+    document.body.classList.add("lightbox-open");
+    closeBtn.focus();
   });
-
-  nextBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    currentIndex = (currentIndex + 1) % galleryImgs.length;
-    updateLightbox();
+  closeBtn.addEventListener("click", () => lightbox.close());
+  prevBtn.addEventListener("click", () => movePhoto(-1));
+  nextBtn.addEventListener("click", () => movePhoto(1));
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
   });
-
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      lightbox.classList.add("hidden");
+  lightbox.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      movePhoto(event.key === "ArrowLeft" ? -1 : 1);
     }
+    if (event.key === "Tab") {
+      const buttons = Array.from(lightbox.querySelectorAll("button"));
+      const first = buttons[0];
+      const last = buttons[buttons.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  });
+  lightbox.addEventListener("close", () => {
+    document.body.classList.remove("lightbox-open");
+    if (galleryOpener?.isConnected) galleryOpener.focus({ preventScroll: true });
   });
 }
