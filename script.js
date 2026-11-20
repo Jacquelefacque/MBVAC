@@ -38,14 +38,68 @@ const translations = {
     "gallery-menu": "Gallery",
     "gallery-title": "Gallery",
     "prevention-title": "PREVENTION",
-    "prevention-description":
-      "Prevention is important because it helps avoid or reduce the occurrence of illnesses and other health conditions, thereby promoting better health, reducing healthcare costs, and improving quality of life.",
+    "prevention-description": `
+      <ul>
+        <li>Assessment of overweight and obesity, and planning next steps</li>
+        <li>Assessment of underweight, and planning next steps</li>
+        <li>Fatigue and sleep difficulties</li>
+        <li>Assessment of high or low blood pressure, with recommendations</li>
+        <li>Questions about growth and puberty</li>
+        <li>Assessment of posture and the spine</li>
+        <li>Vision screening</li>
+        <li>Examinations for kindergarten and school medical records, and medical certificates for young people starting work</li>
+        <li>Examinations before starting sports training</li>
+      </ul>
+    `,
     "treatment-title": "TREATMENT",
-    "treatment-description":
-      "Treatment is essential because it helps alleviate, manage, or cure diseases and health conditions, ensuring that people can live healthier and more productive lives.",
+    "treatment-description": `
+      <ul>
+        <li>Assessment of children who are frequently ill</li>
+        <li>Recurrent respiratory illnesses</li>
+        <li>A persistent runny nose</li>
+        <li>Nasal suction and irrigation using the Proetz method</li>
+        <li>Infection prevention</li>
+        <li>Assessment of which examinations and tests are needed</li>
+        <li>Rapid testing, including Strep A, CRP, influenza, and other tests</li>
+        <li>Intravenous fluids when needed, including for dehydration</li>
+        <li>Assessment of antibiotic use</li>
+        <li>Sick leave certificates for parents and illness certificates for children</li>
+      </ul>
+    `,
     "vaccination-title-big-home": "VACCINATION",
-    "vaccination-description":
-      "We carry out vaccinations in accordance with the national vaccination schedule and also develop an individual vaccination plan based on the child’s health status. We offer vaccinations against other infectious diseases not included in the vaccination schedule, and we also provide vaccination opportunities for parents.",
+    "vaccination-description": `
+      <ul>
+        <li>Preparation of an individual vaccination plan</li>
+        <li>Review of missed vaccinations</li>
+        <li>Assessment of the need for additional vaccinations</li>
+        <li>Discussion of travel vaccination options</li>
+      </ul>
+    `,
+    "prevention-services-title": "Prevention",
+    "treatment-services-title": "Treatment",
+    "infant-care-title": "Infant Care",
+    "infant-care-description": `
+      <ul>
+        <li>Monthly check-ups</li>
+        <li>Vaccination</li>
+        <li>Assessment of infant growth and development</li>
+        <li>Sleep difficulties</li>
+        <li>Digestive problems, bowel movement concerns, and colic</li>
+        <li>Advice on feeding and introducing complementary foods</li>
+        <li>Skin problems and their care or treatment</li>
+        <li>Vision screening</li>
+      </ul>
+    `,
+    "wound-care-title": "Wound Care and Dressing",
+    "wound-care-description": `
+      <ul>
+        <li>Dressing of minor wounds</li>
+        <li>Postoperative wound care according to the doctor’s instructions</li>
+        <li>Care of abrasions and superficial wounds</li>
+        <li>Assessment of wound healing progress</li>
+        <li>Dressing changes</li>
+      </ul>
+    `,
     "about-title": "About our center",
     "about-description-1":
       "The goal of our small medical center is to ensure a healthy and happy child. We have been operating as a pediatric practice since 2010, caring for children from birth until the age of 18, and sometimes beyond. We place great emphasis on disease prevention and education to help avert various illnesses and injuries that can be avoided in the future.",
@@ -79,36 +133,6 @@ const translations = {
           W. Closed<br>
           Th. 13:00 - 19:00<br>
           F. 10:00 - 14:00`,
-    "services-title": "Our Services",
-    "newborn-care-title": "Newborn Care",
-    "newborn-care-description":
-      "Pre-birth familiarization with parents, our staff, and our center's operations. We provide answers to expectant parents' questions. We confirm in the mother's passport our commitment to take the newborn into our care. After birth, we reserve special time for new parents and the newborn's first visit. If the newborn has a problem, we can be reached both during and outside working hours.",
-    "healthy-child-care-title": "Healthy Child Care",
-    "healthy-child-care-description":
-      "Regular monthly preventive check-ups for healthy children up to six months of age. After six months - every other month. If there are health problems - more often. After one year of age - at 15 months, one and a half years, and two years of age. After that, major preventive check-ups are performed once a year (including for adolescents).",
-    "sick-child-care-title": "Sick Child Care",
-    "sick-child-care-description":
-      "If your child has fallen ill, we will do our best to help as quickly as possible. We make every effort to see children with acute illnesses either on the same day or the next day. We also provide phone consultations during working hours, and ongoing support for our regular patients.\n\nAt the moment, we do not offer home visits, as we can assist a sick child much more effectively and quickly at our center rather than at home. Here, we can immediately perform all the necessary tests, and by promptly delivering them to the laboratory, we can receive the results on the same day. We also conduct rapid tests, which help us pinpoint the diagnosis faster and initiate appropriate therapy.\n\nIf needed, we can administer an intravenous drip during the on-site visit. This way, our assistance on the premises is much more efficient.",
-    "certificates-title": "Certificates",
-    "certificates-description": `
-            <ul>
-                <li>School cards (after preventive check-up)</li>
-                <li>Sports and other camp certificates (after check-up)</li>
-                <li>Kindergarten cards (after preventive check-up)</li>
-                <li>Certificates after illness</li>
-            </ul>
-        `,
-    "massage-title": "Massage",
-    "massage-description": `
-            <ul>
-                <li>Therapeutic body massage</li>
-                <li>Anti-cellulite massage</li>
-                <li>Vacuum massage</li>
-                <li>Honey procedures</li>
-                <li>Gua sha method (scraping with a jade plate)</li>
-                <li>Muscle relaxation after mental and physical overloads, using several massage methods</li>
-            </ul>
-        `,
     "pricelist-pediatre": "Pediatrician Guna Deksne",
     "pricelist-service": "Service",
     "pricelist-price": "Price",
@@ -200,12 +224,6 @@ const translations = {
     "newborn-care-title": "Newborn Care",
     "newborn-care-description":
       "Pre-birth familiarization with parents, our staff, and our center's operations. We provide answers to expectant parents' questions. We confirm in the mother's passport our commitment to take the newborn into our care. After birth, we reserve special time for new parents and the newborn's first visit. If the newborn has a problem, we can be reached both during and outside working hours.",
-    "healthy-child-care-title": "Healthy Child Care",
-    "healthy-child-care-description":
-      "Regular monthly preventive check-ups for healthy children up to six months of age. After six months - every other month. If there are health problems - more often. After one year of age - at 15 months, one and a half years, and two years of age. After that, major preventive check-ups are performed once a year (including for adolescents).",
-    "sick-child-care-title": "Sick Child Care",
-    "sick-child-care-description":
-      "If your child has fallen ill, we will do our best to help as quickly as possible. We make every effort to see children with acute illnesses either on the same day or the next day. We also provide phone consultations during working hours, and ongoing support for our regular patients. At the moment, we do not offer home visits, as we can assist a sick child much more effectively and quickly at our center.",
     "vaccination-title-big-services": "Vaccination",
     "certificates-title": "Certificates",
     "certificates-description": `
@@ -267,14 +285,68 @@ const translations = {
     "gallery-menu": "Bildes",
     "gallery-title": "Bildes",
     "prevention-title": "PROFILAKSE",
-    "prevention-description":
-      "Profilakse ir svarīga, jo tā palīdz izvairīties vai mazināt slimību un citu veselības traucējumu rašanos, veicina labāku veselību, samazina veselības aprūpes izmaksas un uzlabo dzīves kvalitāti.",
+    "prevention-description": `
+      <ul>
+        <li>Liekā svara, aptaukošanās izvērtēšana, turpmākā rīcība</li>
+        <li>Nepietiekama svara izvērtēšana, turpmākā rīcība</li>
+        <li>Nogurums, miega traucējumi</li>
+        <li>Paaugstināta, pazemināta asinsspiediena izvērtēšana, rekomendācijas</li>
+        <li>Augšanas un pubertātes jautājumi</li>
+        <li>Stājas, mugurkaula izvērtēšana</li>
+        <li>Redzes skrīnings</li>
+        <li>Apskates bērnudārza un skolas kartes sagatavošanai, kā arī darba atļaujas izziņas jauniešiem</li>
+        <li>Apskates pirms sporta treniņu uzsākšanas</li>
+      </ul>
+    `,
     "treatment-title": "ĀRSTĒŠANA",
-    "treatment-description":
-      "Ārstēšana ir būtiska, jo tā palīdz mazināt, pārvaldīt vai izārstēt slimības un veselības stāvokļus, nodrošinot, ka cilvēki var dzīvot veselīgāku un produktīvāku dzīvi.",
+    "treatment-description": `
+      <ul>
+        <li>Bieži slimojoša bērna izvērtēšana</li>
+        <li>Atkārtotas elpceļu saslimšanas</li>
+        <li>Ilgstošas iesnas</li>
+        <li>Deguna satura atsūkšana/skalošana pēc Proetza metodes</li>
+        <li>Infekciju profilakse</li>
+        <li>Nepieciešamo izmeklējumu izvērtēšana</li>
+        <li>Dažādu ekspresmetožu pielietošana (piem., Strep A, CRO, gripa u.c.)</li>
+        <li>I.v. sistēmas ievadīšana vajadzības gadījumā, arī pie dehidratācijas</li>
+        <li>Antibiotiku lietošanas izvērtēšana</li>
+        <li>Darbnespējas lapas (DNL) vecākiem, slimības izziņas bērniem</li>
+      </ul>
+    `,
     "vaccination-title-big-home": "VAKCINĀCIJA",
-    "vaccination-description":
-      "Vakcināciju veicam atbilstoši valsts vakcinācijas kalendāram, kā arī izstrādājam individuālu vakcinācijas grafiku, ņemot vērā bērna veselības stāvokli. Piedāvājam arī vakcināciju pret citām infekcijas slimībām, kas nav iekļautas vakcinācijas kalendārā. Tāpat nodrošinām vakcinācijas iespējas arī vecākiem.",
+    "vaccination-description": `
+      <ul>
+        <li>Individuālā vakcinācijas plāna sastādīšana</li>
+        <li>Nokavētās vakcinācijas izvērtēšana</li>
+        <li>Papildu vakcinācijas nepieciešamības izvērtēšana</li>
+        <li>Pārrunas par ceļojuma vakcinācijas iespējām</li>
+      </ul>
+    `,
+    "prevention-services-title": "Profilakse",
+    "treatment-services-title": "Ārstēšana",
+    "infant-care-title": "Zīdaiņi",
+    "infant-care-description": `
+      <ul>
+        <li>Ikmēneša apskates</li>
+        <li>Vakcinācija</li>
+        <li>Zīdaiņu augšanas un attīstības novērtēšana</li>
+        <li>Miega problēmas</li>
+        <li>Gremošanas, vēderizejas, kolikas problēmas</li>
+        <li>Barošanas, piebarojuma konsultācijas</li>
+        <li>Dažādas ādas problēmas, to kopšana/ārstēšana</li>
+        <li>Redzes skrīnings</li>
+      </ul>
+    `,
+    "wound-care-title": "Brūču apstrāde un pārsiešana",
+    "wound-care-description": `
+      <ul>
+        <li>Nelielu brūču pārsiešana</li>
+        <li>Pēcoperāciju brūču apstrāde atbilstoši ārsta norādījumiem</li>
+        <li>Nobrāzumu un virspusēju brūču apstrāde</li>
+        <li>Brūces dzīšanas dinamikas novērtēšana</li>
+        <li>Pārsēju maiņa</li>
+      </ul>
+    `,
     "about-title": "Par mūsu centru",
     "about-description-1":
       "Mūsu mazā medicīnas centra mērķis ir veselīgs un laimīgs bērns. Darbojamies kā pediatrijas prakse kopš 2010. gada. Mēs aprūpējam bērnus no dzimšanas brīža līdz 18 gadu vecumam, reizēm arī ilgāk. Pievēršam lielu uzmanību slimību profilaksei un bērna izglītošanai, lai nākotnē novērstu dažādas saslimšanas un traumas, no kurām iespējams izvairīties.",
@@ -312,12 +384,6 @@ const translations = {
     "newborn-care-title": "Jaundzimušā aprūpe",
     "newborn-care-description":
       "Pirmsdzemdību iepazīšanās ar vecākiem, mūsu darbiniekiem un centra darbību. Sniedzam atbildes uz topošo vecāku jautājumiem. Mātes pasē apstiprinām apņemšanos ņemt jaundzimušo savā aprūpē. Pēc dzemdībām rezervējam īpašu laiku jaunajiem vecākiem un jaundzimušā bērniņa pirmajai vizītei. Ja jaundzimušajam radusies problēma, iespējams sazvanīt gan darba laikos, gan ārpus tā. Pēc vecāku vēlēšanās dodamies arī mājas vizītē pie jaundzimušā.",
-    "healthy-child-care-title": "Vesela bērna aprūpe",
-    "healthy-child-care-description":
-      "Vesela bērna profilaktiskās apskates līdz sešu mēnešu vecumam regulāri ik mēnesi. Pēc sešiem – katru otro mēnesi. Ja ir veselības problēmas – biežāk. Pēc gada vecuma – 15 mēnešu, pusotra un divu gadu vecumā. Pēc tam vienu reizi gadā veicam lielās profilaktiskās apskates (arī pusaudžiem).",
-    "sick-child-care-title": "Slima bērna aprūpe",
-    "sick-child-care-description":
-      "Ja bērns ir saslimis, centīsimies palīdzēt pēc iespējas ātrāk. Akūti saslimušus bērnus cenšamies apskatīt tajā pašā dienā vai tuvākajās dienās. Sniedzam konsultācijas telefoniski darba laikā un arī pēc tam. Īpašos gadījumos dodamies arī mājas vizītē pie slima bērna. Pārsvarā informējam, ka efektīvāk un ātrāk slimajam bērnam var palīdzēt mūsu centrā, nevis mājās.",
     "vaccination-title-big-services": "Vakcinācija",
     "certificates-title": "Izziņas",
     "certificates-description": `
@@ -648,15 +714,15 @@ function loadSection(section) {
       <section class="service-highlights">
         <div class="service-box">
           <h2 data-key="prevention-title">PREVENTION</h2>
-          <p data-key="prevention-description"></p>
+          <div data-key="prevention-description"></div>
         </div>
         <div class="service-box">
           <h2 data-key="treatment-title">TREATMENT</h2>
-          <p data-key="treatment-description"></p>
+          <div data-key="treatment-description"></div>
         </div>
         <div class="service-box">
           <h2 data-key="vaccination-title-big-home">VACCINATION</h2>
-          <p data-key="vaccination-description"></p>
+          <div data-key="vaccination-description"></div>
         </div>
       </section>
       <section class="about">
@@ -674,20 +740,28 @@ function loadSection(section) {
         <h1 class="section-title" data-key="services-title"></h1>
         <div class="service-grid">
           <div class="service-item">
-            <h2 data-key="newborn-care-title">Newborn Care</h2>
-            <p data-key="newborn-care-description"></p>
-          </div>
-          <div class="service-item">
-            <h2 data-key="healthy-child-care-title">Healthy Child Care</h2>
-            <p data-key="healthy-child-care-description"></p>
-          </div>
-          <div class="service-item">
-            <h2 data-key="sick-child-care-title">Sick Child Care</h2>
-            <p data-key="sick-child-care-description"></p>
+            <h2 data-key="treatment-services-title">Treatment</h2>
+            <div data-key="treatment-description"></div>
           </div>
           <div class="service-item">
             <h2 data-key="vaccination-title-big-services">Vaccination</h2>
-            <p data-key="vaccination-description"></p>
+            <div data-key="vaccination-description"></div>
+          </div>
+          <div class="service-item">
+            <h2 data-key="prevention-services-title">Prevention</h2>
+            <div data-key="prevention-description"></div>
+          </div>
+          <div class="service-item">
+            <h2 data-key="infant-care-title">Infant Care</h2>
+            <div data-key="infant-care-description"></div>
+          </div>
+          <div class="service-item">
+            <h2 data-key="wound-care-title">Wound Care and Dressing</h2>
+            <div data-key="wound-care-description"></div>
+          </div>
+          <div class="service-item">
+            <h2 data-key="newborn-care-title">Newborn Care</h2>
+            <p data-key="newborn-care-description"></p>
           </div>
           <div class="service-item">
             <h2 data-key="certificates-title">Certificates</h2>

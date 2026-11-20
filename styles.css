@@ -84,6 +84,7 @@ main > section { margin-bottom: 32px; }
 .service-highlights, .team-container { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .service-box { padding: 26px; border-radius: var(--radius); }
 .service-box h2 { margin-top: 0; font-size: 1.15rem; }
+.service-box ul { margin: 0; }
 .service-box:nth-child(1), .service-item:nth-child(6n + 1) { background: #fff0dc; }
 .service-box:nth-child(2), .service-item:nth-child(6n + 2) { background: #e7f0fa; }
 .service-box:nth-child(3), .service-item:nth-child(6n + 3) { background: #eaf2e1; }
